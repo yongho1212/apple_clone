@@ -13,9 +13,6 @@
     <div id="globalheader">
         <nav id="globalnav">
             <div class="globalnav-content">
-                <div>
-
-                </div>
                 <ul id="globalnav-list" class="globalnav-list">
 
                     <!-- hover active 시키면 글로벌 네브 아래로 꽉채운 메뉴화면을 고정으로 보이게 하고
@@ -24,7 +21,7 @@
 
                     <!-- 로고 -->
                     <li class="globalnav-item globalnav-item-apple">
-                        <a>
+                        <a href="index.html">
                             로고
                         </a>
                     </li>
@@ -54,6 +51,9 @@
                                     MAC
                                 </span>
                             </a>
+                            <div class="drawer-container">
+                                하단 drawer
+                            </div>
                         </div>
                     </li>
 
@@ -75,15 +75,23 @@
                         </div>
                     </li>
                 </ul>
-                <div>
 
-                </div>
             </div>
 
         </nav>
         
     </div>
+    <div class="applePayPage">
+        <a href="pay/payMain.html" class="applePayLink">
+            <div class="payTextContainer">
+                <p id="payTitle">🍏Pay</p>
+                <p id="payContents">카드 없이. 현금 없이. 오늘부터 바로</p>
+            </div>
+            <img src="images/iphone.png" alt="" id="iphoneImg">
 
+        </a>
+
+    </div>
     <script src="index.js"></script>
 </body>
 

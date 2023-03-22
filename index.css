@@ -4,7 +4,16 @@ body{
 
 ul {
     list-style:none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
 }
+
+li {
+    float: left;
+}
+
 
 #globalheader{
     top: 0;
@@ -24,18 +33,7 @@ ul {
 #globalnav{
     justify-content: center;
     display: flex;
-    
-}
 
-#globlanav .globalnav-list {
-    cursor: default;
-    /*margin: 0 -9px;*/
-    width: auto;
-    height: 44px;
-    display: flex;
-    
-    width: 998px;
-    
 }
 
 #globalnav .globalnav-content{
@@ -44,28 +42,44 @@ ul {
     max-width: 1024px;
     width: 100%;
     height: 44px;
-    box-sizing: border-box; 
-    background-color: aqua;
+
+
+
+
+}
+
+#globlanav .globalnav-list {
+    cursor: default;
+
+
+    
+
     
 }
+
+
 
 #globalnav-list {
     display: flex;
     justify-content: space-between;
-
-    background-color:darkgoldenrod;
-}
-
-.triggered-container{
-    display: none;
-}
-
-.globalnav-item:hover .triggered-container{
-    display: block;
-    position: absolute;
-    background-color: red;
     width: 100%;
-    
+
+
+}
+
+.globalnav-item{
+
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.globalnav-item-menu{
+
+
+
 }
 
 
@@ -75,17 +89,79 @@ ul {
 
 .globalnav-item-store:hover .drawer-container{
 
-    background-color: red;
+    background-color: lightsalmon;
     position: absolute;
+    top: 45px;
     left: 0;
-    width: 100vw;
+    width: 101vw;
     height: 50vh;
-    transition: all 1s;
+    animation-duration: 0.8s;
+    animation-iteration-count:1;
+    animation-name: dropdown;
     visibility: visible;
+    margin: -2px;
+    opacity: 0.9;
+}
+
+@keyframes dropdown {
+    from{
+        top: -100px;
+        opacity: 0;
+    }
+    to{
+        top: 45px;
+
+    }
+
 }
 
 .drawer-container{
+    width: 0;
     height: 0;
     visibility: hidden;
 }
+
+.applePayPage{
+    height: 100%;
+    width: 100%;
+
+    cursor: pointer;
+}
+
+.applePayPage .applePayLink{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    text-decoration-line: none;
+}
+
+.applePayPage .applePayLink .payTextContainer{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+
+}
+
+#payTitle{
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: -18px;
+    color: #000;
+}
+
+#payContents{
+    font-size: 27px;
+    color: #000;
+}
+
+#iphoneImg{
+    width: 400px;
+    position: absolute;
+    bottom: -430px;
+}
+
 
